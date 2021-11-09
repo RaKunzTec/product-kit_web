@@ -1,6 +1,6 @@
 {
   "name": "@daimler/productkit-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Product Kit for React provides web components for Daimler TSS web frontends based on Material Web Components",
   "license": "MIT",
   "repository": {
