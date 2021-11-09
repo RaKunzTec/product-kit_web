@@ -1,0 +1,43 @@
+// SPDX-License-Identifier: MIT
+// © Daimler TSS GmbH
+@use "@daimler/productkit-core/exports/web/styles/scss/variables" as tokens;
+@use "@daimler/productkit-core/exports/web/utils/scss/utils" as utils;
+
+// Material theme definitions
+@use "@material/theme" with (
+  $primary: tokens.$color-application-primary,
+  $secondary: tokens.$color-application-secondary,
+  $background: tokens.$color-application-background,
+  $surface: tokens.$color-application-surface,
+  $error: tokens.$color-application-error,
+  $on-primary: tokens.$color-application-contrast-primary,
+  $on-secondary: tokens.$color-application-contrast-secondary,
+  $on-surface: tokens.$color-application-contrast-surface,
+  $on-error: tokens.$color-application-contrast-error
+);
+
+@use "@material/shape" with (
+  $small-component-radius: tokens.$size-shape-radius,
+  $medium-component-radius: tokens.$size-shape-radius,
+  $large-component-radius: tokens.$size-shape-radius,
+);
+
+@use "@material/typography" with (
+  $font-family: unquote("SourceSansPro, sans-serif"),
+  $styles-headline1: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "headline1"),
+  $styles-headline2: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "headline2"),
+  $styles-headline3: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "headline3"),
+  $styles-headline4: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "headline4"),
+  $styles-headline5: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "headline5"),
+  $styles-headline6: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "headline6"),
+  $styles-subtitle1: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "subtitle1"),
+  $styles-subtitle2: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "subtitle2"),
+  $styles-body1: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "body1"),
+  $styles-body2: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "body2"),
+  $styles-button: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "button"),
+  $styles-caption: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "caption"),
+  $styles-overline: utils.map-deep-get(tokens.$tokens, "font", "application", "l", "overline"),
+);
+
+// Import font
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900");

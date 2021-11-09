@@ -1,0 +1,325 @@
+// SPDX-License-Identifier: MIT
+// © Daimler TSS GmbH
+@use "@daimler/productkit-core/exports/web/styles/scss/variables" as tokens;
+
+// Import component specific styles
+@use "@material/button";
+@use "@material/icon-button";
+@use "@material/card";
+@use "@material/linear-progress";
+@use "@material/textfield";
+@use "@material/snackbar";
+@use "@material/list";
+@use "@material/image-list";
+@use "@material/data-table";
+@use "@material/slider";
+@use "@material/checkbox";
+@use "@material/drawer";
+@use "@material/textfield/icon";
+@use "@material/dialog";
+@use '@material/select';
+@use "@material/form-field";
+
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/chips/mdc-chips";
+@import "@material/dialog/mdc-dialog";
+@import "@material/drawer/mdc-drawer";
+@import "@material/elevation/mdc-elevation";
+@import "@material/fab/mdc-fab";
+@import "@material/form-field/mdc-form-field";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/image-list/mdc-image-list";
+@import "@material/linear-progress/mdc-linear-progress";
+@import "@material/circular-progress/mdc-circular-progress";
+@import "@material/list/mdc-list";
+@import "@material/menu/mdc-menu";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/radio/mdc-radio";
+@import "@material/ripple/mixins";
+@import "@material/rtl/mixins";
+@import "@material/select/styles";
+@import "@material/shape/mixins";
+@import "@material/shape/functions";
+@import "@material/slider/styles";
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/switch/mdc-switch";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/textfield/mdc-text-field";
+@import "@material/textfield/helper-text";
+@import "@material/theme/mdc-theme";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
+@import "@material/data-table/mdc-data-table";
+
+// Button
+.mdc-button {
+  @include button.outline-color(tokens.$color-application-primary);
+}
+
+.mdc-icon-button {
+  @include icon-button.ink-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-icon-high));
+}
+
+// Checkbox 
+.mdc-checkbox {
+  @include checkbox.core-styles;
+}
+
+// Chips
+.mdc-chip {
+  @include mdc-chip-fill-color(tokens.$color-application-surface);
+  @include mdc-chip-ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high));
+  @include mdc-chip-selected-ink-color(rgba(tokens.$color-application-primary, tokens.$opacity-application-text-contrast-high));
+  @include mdc-chip-outline-color(tokens.$color-application-outline);
+  @include mdc-chip-leading-icon-color(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-high);
+  @include mdc-chip-trailing-icon-color(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-medium, tokens.$opacity-application-icon-high, tokens.$opacity-application-icon-high);
+}
+
+// Top app bar
+.mdc-top-app-bar {
+  @include mdc-elevation(4);
+
+  @include mdc-top-app-bar-ink-color(rgba(tokens.$color-application-contrast-primary, tokens.$opacity-application-text-contrast-high));
+  @include mdc-top-app-bar-icon-ink-color(rgba(tokens.$color-application-contrast-primary, tokens.$opacity-application-icon-contrast-high));
+}
+
+// Card
+.mdc-card {
+  @include card.fill-color(tokens.$color-application-surface);
+
+  .mdc-typography--headline6 {
+    color: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high);
+  }
+
+  .mdc-typography--body2 {
+    color: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium);
+  }
+}
+
+.mdc-card--outlined {
+  @include card.outline(tokens.$color-application-outline, 1px);
+}
+
+// Linear progress
+.mdc-linear-progress {
+  @include linear-progress.bar-color(tokens.$color-application-primary);
+  @include linear-progress.buffer-color(rgba(tokens.$color-application-primary, tokens.$opacity-application-surface-low));
+
+  .mdc-linear-progress__buffer {
+    background-color: rgba(tokens.$color-application-primary, tokens.$opacity-application-surface-low);
+  }
+}
+
+// Circular progress
+.mdc-circular-progress {
+  $colors: tokens.$color-application-primary, tokens.$color-application-tertiary, tokens.$color-application-secondary, tokens.$color-application-quaternary;
+  @include mdc-circular-progress-indeterminate-colors($colors);
+}
+
+// Drawer
+.mdc-drawer {
+  @include mdc-elevation(16);
+
+  @include drawer.surface-fill-color(tokens.$color-application-surface);
+  @include drawer.title-ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high));
+  @include drawer.subtitle-ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium));
+
+  .mdc-list {
+    @include drawer.item-icon-ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-medium));
+    @include drawer.item-text-ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium));
+    @include drawer.item-activated-icon-ink-color(rgba(tokens.$color-application-primary, tokens.$opacity-application-icon-contrast-high));
+    @include drawer.item-activated-text-ink-color(rgba(tokens.$color-application-primary, tokens.$opacity-application-text-contrast-high));
+  }
+  
+}
+
+// Text field
+.mdc-text-field {
+  @include textfield.ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high));
+  @include textfield.placeholder-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low));
+  @include textfield.disabled-ink-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium));
+  @include textfield.disabled-placeholder-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low));
+  @include textfield.disabled-label-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low));
+  @include textfield.prefix-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high));
+  @include textfield.disabled-prefix-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low));
+  @include textfield.suffix-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high));
+  @include textfield.disabled-suffix-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low));
+
+  .mdc-text-field--filled {
+    @include textfield.fill-color(tokens.$color-application-surface);
+    @include textfield.disabled-fill-color(rgba(tokens.$color-application-surface, tokens.$opacity-application-surface-low));
+  }
+
+  .mdc-text-field__icon:not(.mdc-text-field--invalid) {
+    @include icon.leading-icon-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-medium));
+    @include icon.trailing-icon-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-medium));
+    @include icon.disabled-icon-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-low));  
+  }
+}
+
+.mdc-text-field:not(.mdc-text-field--invalid) {
+  @include textfield.label-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium));
+  @include textfield.outline-color(tokens.$color-application-outline);
+  @include textfield.hover-outline-color(tokens.$color-application-contrast-outline);
+  @include textfield.focused-outline-color(tokens.$color-application-primary);
+  @include textfield.disabled-outline-color(rgba(tokens.$color-application-outline, tokens.$opacity-application-surface-low));
+  @include textfield.bottom-line-color(tokens.$color-application-outline);
+  @include textfield.hover-bottom-line-color(tokens.$color-application-contrast-outline);
+  @include textfield.disabled-bottom-line-color(rgba(tokens.$color-application-outline, tokens.$opacity-application-surface-low));
+}
+
+// Tabs
+.mdc-tab-bar {
+  .mdc-tab {
+    @include mdc-tab-text-label-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-medium));
+    @include mdc-tab-icon-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-icon-medium));
+    @include mdc-tab-states-color(tokens.$color-application-contrast-background);
+    @include mdc-tab-active-text-label-color(tokens.$color-application-primary);
+    @include mdc-tab-active-icon-color(tokens.$color-application-primary);
+    @include mdc-tab-active-states-color(tokens.$color-application-primary);
+  }
+}
+
+// Select
+.mdc-select {
+  .mdc-select--filled {
+    @include select.container-fill-color((
+      default: tokens.$color-application-surface,
+      disabled: rgba(tokens.$color-application-surface, tokens.$opacity-application-surface-low)
+    ));
+  }
+}
+
+.mdc-select:not(.mdc-select--invalid) {
+  @include select.ink-color((
+    default: tokens.$color-application-contrast-surface,
+    disabled: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low)
+  ));
+  @include select.label-color((
+    default: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium),
+    disabled: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-low)
+  ));
+  @include select.label-floating-color((
+    default: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium)
+  ));
+  @include select.bottom-line-color((
+    default: tokens.$color-application-outline,
+    hover: tokens.$color-application-contrast-outline,
+    focus: tokens.$color-application-primary,
+    disabled: rgba(tokens.$color-application-outline, tokens.$opacity-application-surface-low)
+  ));
+  @include select.outline-color((
+    default: tokens.$color-application-outline,
+    hover: tokens.$color-application-contrast-outline,
+    focus: tokens.$color-application-primary,
+    disabled: rgba(tokens.$color-application-outline, tokens.$opacity-application-surface-low)
+  ));
+  @include select.dropdown-icon-color((
+    default: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-medium),
+    focus: tokens.$color-application-primary,
+    disabled: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-icon-low)
+  ));
+}
+
+// Slider
+.mdc-slider {
+  @include slider.track-active-color(tokens.$color-application-secondary);
+  @include slider.track-inactive-color(tokens.$color-application-secondary, tokens.$opacity-application-surface-low);
+  @include slider.thumb-color(tokens.$color-application-secondary);
+  @include slider.thumb-ripple-color(tokens.$color-application-secondary);
+  @include slider.tick-mark-active-color(rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-surface-low));
+  @include slider.tick-mark-inactive-color(tokens.$color-application-secondary);
+}
+
+// Snackbar
+.mdc-snackbar {
+  @include snackbar.fill-color(tokens.$color-application-contrast-surface);
+  @include snackbar.label-ink-color(tokens.$color-application-surface);
+
+  .mdc-button__label {
+    color: tokens.$color-application-quaternary;
+  }
+  .mdc-snackbar__action {
+    @include mdc-states(tokens.$color-application-quaternary);
+  }
+}
+
+// Dialog
+.mdc-dialog {
+  @include dialog.container-fill-color(tokens.$color-application-surface);
+  @include dialog.title-ink-color(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high);
+  @include dialog.content-ink-color(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-medium);
+
+  .mdc-dialog__content {
+    @extend .mdc-typography--body2;
+  }
+}
+
+// List
+.mdc-list {
+  @include list.item-primary-text-ink-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-high));
+  @include list.item-secondary-text-ink-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-medium));
+  @include list.item-graphic-ink-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-icon-high));
+  @include list.item-meta-ink-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-medium));
+  @include list.divider-color(tokens.$color-application-outline);
+  @include list.item-selected-text-color(tokens.$color-application-primary);
+  @include list.item-disabled-text-color(tokens.$color-application-contrast-background);
+  @include list.item-disabled-text-opacity(tokens.$opacity-application-text-low);
+}
+
+.mdc-list-group {
+  @include list.group-subheader-ink-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-high));
+}
+
+// Image list
+.masonry-list {
+  @include image-list.masonry-columns(2);
+
+  .mdc-image-list__label {
+    color: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high);
+  }
+
+  .mdc-image-list__supporting {
+    background-color: rgba(tokens.$color-application-background, tokens.$opacity-application-surface-low);
+  }
+}
+
+.standard-list {
+  @include image-list.standard-columns(2);
+  @include image-list.aspect(1.8);
+
+  .mdc-image-list__label {
+    color: rgba(tokens.$color-application-contrast-surface, tokens.$opacity-application-text-high);
+  }
+}
+
+// Form Field
+.mdc-form-field {
+  @include form-field.core-styles;
+}
+
+// Data table
+.mdc-data-table {
+  @include checkbox.core-styles;
+  @include icon-button.core-styles;
+  @include data-table.fill-color(tokens.$color-application-background);
+  @include data-table.stroke-color(tokens.$color-application-outline);
+  @include data-table.divider-color(tokens.$color-application-outline);
+  @include data-table.sort-icon-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-icon-high));
+  @include data-table.sort-icon-active-color(tokens.$color-application-primary);
+  @include data-table.header-row-fill-color(tokens.$color-application-surface);
+  @include data-table.selected-row-fill-color(rgba(tokens.$color-application-surface, tokens.$opacity-application-surface-low));
+  @include data-table.row-hover-fill-color(rgba(tokens.$color-application-surface, tokens.$opacity-application-surface-low));
+  @include data-table.header-row-text-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-high));
+  @include data-table.row-text-color(rgba(tokens.$color-application-contrast-background, tokens.$opacity-application-text-high));
+
+  .mdc-data-table__header-cell-label,
+  .mdc-data-table__header-cell {
+    font-weight: tokens.$font-weight-bold;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@daimler/productkit-react",
+  "version": "1.0.0",
+  "description": "Product Kit for React provides web components for Daimler TSS web frontends based on Material Web Components",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daimler/product-kit_react"
+  },
+  "bugs": {
+    "url": "https://github.com/Daimler/product-kit_react/issues"
+  },
+  "scripts": {
+    "test": "(cd test && webpack serve)"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "autoprefixer": "^10.3.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "5.2.6",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "postcss-loader": "^6.1.0",
+    "sass": "1.35.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "4.2.1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@daimler/productkit-core": "^1.0.6",
+    "material-components-web": "10.0.0"
+  }
+}
