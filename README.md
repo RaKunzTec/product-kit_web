@@ -23,7 +23,7 @@ npm install @daimler/productkit-web
 
 Import `styles.scss` inside your App.scss or similar root styling scss file:
 ```scss
-@import "@daimler/productkit-react/src/theme/scss/styles";
+@import "@daimler/productkit-web/src/theme/scss/styles";
 ```
 
 Your Material components should now be styled accordingly to the styleguide of Daimler TSS!
