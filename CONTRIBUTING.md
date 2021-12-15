@@ -18,7 +18,7 @@ For communication please respect our [FOSS Code of Conduct](https://github.com/D
 The following communication channels exist for this project:
 
 - Non-personal mailbox: productkit.pool-id@daimler.com
-- Github for reporting and claiming issues: [https://github.com/Daimler/product-kit_react/issues](https://github.com/Daimler/product-kit_react/issues)
+- Github for reporting and claiming issues: [https://github.com/Daimler/product-kit_web/issues](https://github.com/Daimler/product-kit_web/issues)
 
 Transparent and open communication is important to us. Thus, all project-related communication should happen only through these channels and in English. Issue-related communication should happen within the concerned issue.
 
@@ -32,7 +32,7 @@ If you are new to contributing in Github, [First Contributions](https://github.c
 
 If you are employed at Daimler TSS please complete the FOSS Drivers License `Contribute` before you make a contribution.
 
-Please be aware that any change in the `components` or `globals` files changes styling of the projects that are using this project. Therefore we are very catious about merging visual changes. If you need something changed or have a suggestion for improvement feel free to open an issue [here](https://github.com/Daimler/product-kit_react/issues).
+Please be aware that any change in the `components` or `globals` files changes styling of the projects that are using this project. Therefore we are very catious about merging visual changes. If you need something changed or have a suggestion for improvement feel free to open an issue [here](https://github.com/Daimler/product-kit_web/issues).
 
 ## Quality
 

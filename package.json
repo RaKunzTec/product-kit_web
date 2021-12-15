@@ -1,14 +1,14 @@
 {
-  "name": "@daimler/productkit-react",
+  "name": "@daimler/productkit-web",
   "version": "1.0.0",
-  "description": "Product Kit for React provides web components for Daimler TSS web frontends based on Material Web Components",
+  "description": "Product Kit for Web provides components for Daimler TSS web frontends based on Material Web Components",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Daimler/product-kit_react"
+    "url": "https://github.com/Daimler/product-kit_web"
   },
   "bugs": {
-    "url": "https://github.com/Daimler/product-kit_react/issues"
+    "url": "https://github.com/Daimler/product-kit_web/issues"
   },
   "scripts": {
     "test": "(cd test && webpack serve)"

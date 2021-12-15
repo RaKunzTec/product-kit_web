@@ -1,6 +1,6 @@
 Copyright 2021
 
-[produkt-kit-react : 1.5.0]
+[produktkit-web : 1.0.6]
 
 Phase: RELEASED
 Distribution: OPENSOURCE

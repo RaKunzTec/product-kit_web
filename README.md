@@ -1,16 +1,16 @@
 <!-- SPDX-License-Identifier: MIT --->
 <!-- © Daimler TSS GmbH --->
-![Product Kit Angular Logo](https://github.com/Daimler/product-kit_react/raw/main/docs/images/productkit_react_github_logo.png)
+![Product Kit Web Logo](https://github.com/Daimler/product-kit_web/raw/main/docs/images/productkit_web_github_logo.png)
 [![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)](LICENSE)
-[![npm](https://img.shields.io/npm/v/@daimler/productkit-react)](https://www.npmjs.com/package/@daimler/productkit-react)
+[![npm](https://img.shields.io/npm/v/@daimler/productkit-web)](https://www.npmjs.com/package/@daimler/productkit-web)
 ![material-components-web](https://img.shields.io/badge/material--components--web-v10.0.0-046AAE?&style=flat)
 
-Product Kit for React provides web components for Daimler TSS web frontends based on Material Web Components.
+Product Kit for Web provides components for Daimler TSS web frontends based on Material Web Components.
 
-Feel free to open an [issue](https://github.com/Daimler/product-kit_react/issues) or provide a pull request with the desired modifications.
+Feel free to open an [issue](https://github.com/Daimler/product-kit_web/issues) or provide a pull request with the desired modifications.
 
 ## Examples
-![Component Overview](https://github.com/Daimler/product-kit_react/raw/main/docs/images/component-overview-teaser.png)
+![Component Overview](https://github.com/Daimler/product-kit_web/raw/main/docs/images/component-overview-teaser.png)
 
 ## Installation
 
@@ -18,7 +18,7 @@ Feel free to open an [issue](https://github.com/Daimler/product-kit_react/issues
 
 Install the npm package from the root directory through:
 ```
-npm install @daimler/productkit-react --save-prod
+npm install @daimler/productkit-web
 ```
 
 Import `styles.scss` inside your App.scss or similar root styling scss file:
@@ -38,7 +38,7 @@ Add a component like for instance a button as stated in the Material [documentat
 </button>
 ```
 
-You don't need to import any styling as Product Kit for React does all the styling for you!
+You don't need to import any styling as Product Kit does all the styling for you!
 
 Add ripple effect or other modifications in your App.js:
 ```javascript
@@ -49,7 +49,7 @@ const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 
 Please look up other components in the [Material documentation](https://github.com/material-components/material-components-web/tree/v10.0.0/packages).
 
-If you need help or something isn't working as expected feel free to open an [issue](https://github.com/Daimler/product-kit_react/issues).
+If you need help or something isn't working as expected feel free to open an [issue](https://github.com/Daimler/product-kit_web/issues).
 
 ## Contributing
 

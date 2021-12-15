@@ -1,4 +1,4 @@
-name: Core Package Publishing
+name: Package Publishing
 
 on:
   release:
